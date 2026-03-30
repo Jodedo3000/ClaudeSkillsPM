@@ -25,7 +25,7 @@ The difference in practice:
 | Skill | What it does | Status |
 |-------|-------------|--------|
 | [ai-evals](./ai-evals/) | Design evaluation frameworks for AI-powered features | ✅ v1 |
-| prd-spec | Write a post-prototype PRD | 🔜 Coming soon |
+| [prd-spec](./prd-spec/) | Write a full post-prototype PRD | ✅ v1 |
 | user-interview-script | Generate structured research interview guides | 🔜 Coming soon |
 | feature-prioritization | Apply RICE/MoSCoW scoring to a feature list | 🔜 Coming soon |
 | competitive-teardown | Structure a competitive analysis | 🔜 Coming soon |
@@ -69,6 +69,26 @@ Claude will recognise the context, load the skill, and guide you through a struc
 **Benchmark:** Tested across 3 realistic PM scenarios. With skill: **100% pass rate** vs without skill: **67%** on structured completeness criteria. The biggest gains were in failure mode specificity, edge case coverage, and monitoring thresholds.
 
 → [View SKILL.md](./ai-evals/SKILL.md) · [Download .skill file](./dist/ai-evals.skill)
+
+---
+
+## Skill: PRD Spec (Post-Prototype)
+
+**The problem it solves:** Writing a PRD after prototype sign-off is different from early-stage discovery docs — the "what" and "why" are settled, and now the spec needs to be precise enough for engineering to build from and stakeholders to sign off on. Without structure, PRDs often miss MoSCoW prioritisation, edge cases, accessibility NFRs, explicit out-of-scope decisions, and open questions with owners.
+
+**What it produces:** A full 12-section PRD including:
+- TLDR (stakeholder-facing summary)
+- Goals & success metrics with measurable targets
+- MoSCoW-prioritised functional requirements
+- Edge cases table
+- Non-functional requirements (performance, accessibility, security)
+- Explicit out-of-scope section
+- Open questions with owners and deadlines
+- Launch & rollout plan
+
+**Benchmark:** Tested across 3 scenarios (AI email assistant, mobile onboarding redesign, seller analytics dashboard). With skill: **100% pass rate** vs without skill: **62%**. The biggest gaps without the skill were missing TLDR structure, no MoSCoW prioritisation, absent accessibility requirements, and vague or missing out-of-scope sections.
+
+→ [View SKILL.md](./prd-spec/SKILL.md) · [Download .skill file](./dist/prd-spec.skill)
 
 ---
 
