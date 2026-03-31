@@ -26,7 +26,7 @@ The difference in practice:
 |-------|-------------|--------|
 | [ai-evals](./ai-evals/) | Design evaluation frameworks for AI-powered features | ✅ v1 |
 | [prd-spec](./prd-spec/) | Write a full post-prototype PRD | ✅ v1 |
-| user-interview-script | Generate structured research interview guides | 🔜 Coming soon |
+| [user-interview-script](./user-interview-script/) | Generate structured research interview guides | ✅ v1 |
 | feature-prioritization | Apply RICE/MoSCoW scoring to a feature list | 🔜 Coming soon |
 | competitive-teardown | Structure a competitive analysis | 🔜 Coming soon |
 | retro-facilitator | Generate a structured retrospective | 🔜 Coming soon |
@@ -89,6 +89,23 @@ Claude will recognise the context, load the skill, and guide you through a struc
 **Benchmark:** Tested across 3 scenarios (AI email assistant, mobile onboarding redesign, seller analytics dashboard). With skill: **100% pass rate** vs without skill: **62%**. The biggest gaps without the skill were missing TLDR structure, no MoSCoW prioritisation, absent accessibility requirements, and vague or missing out-of-scope sections.
 
 → [View SKILL.md](./prd-spec/SKILL.md) · [Download .skill file](./dist/prd-spec.skill)
+
+---
+
+## Skill: User Interview Script
+
+**The problem it solves:** Most PMs write interview guides that are just lists of questions — no screener, no moderator notes, no structure to map questions back to assumptions. This skill produces a ready-to-run interview guide that covers participant recruitment, five structured sections, per-question probe prompts, and a post-interview debrief template for tracking assumption confidence.
+
+**What it produces:** A complete User Interview Guide including:
+- Research objective (decision-focused, not topic-focused)
+- Participant screener with must-haves, nice-to-haves, disqualifiers, and target mix
+- 5-section interview script (Warm-Up → Current Behaviour → Core Exploration → Concept Probe → Wrap-Up)
+- Moderator notes and per-question probe prompts in Section 3
+- Post-interview debrief template with per-assumption confidence tracking
+
+**Benchmark:** Tested across 3 scenarios (checkout abandonment, B2B onboarding drop-off, AI concept validation). With skill: **100% pass rate** vs without skill: **0%**. Without the skill, every output failed on at least 2 criteria — most commonly: missing formal screener with disqualifiers, probe prompts not embedded per-question, and debrief templates lacking assumption-tracking.
+
+→ [View SKILL.md](./user-interview-script/SKILL.md) · [Download .skill file](./dist/user-interview-script.skill)
 
 ---
 
