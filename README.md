@@ -27,7 +27,7 @@ The difference in practice:
 | [ai-evals](./ai-evals/) | Design evaluation frameworks for AI-powered features | ✅ v1 |
 | [prd-spec](./prd-spec/) | Write a full post-prototype PRD | ✅ v1 |
 | [user-interview-script](./user-interview-script/) | Generate structured research interview guides | ✅ v1 |
-| feature-prioritization | Apply RICE/MoSCoW scoring to a feature list | 🔜 Coming soon |
+| [feature-prioritization](./feature-prioritization/) | Apply RICE/MoSCoW scoring to a feature list | ✅ v1 |
 | competitive-teardown | Structure a competitive analysis | 🔜 Coming soon |
 | retro-facilitator | Generate a structured retrospective | 🔜 Coming soon |
 
@@ -89,6 +89,24 @@ Claude will recognise the context, load the skill, and guide you through a struc
 **Benchmark:** Tested across 3 scenarios (AI email assistant, mobile onboarding redesign, seller analytics dashboard). With skill: **100% pass rate** vs without skill: **62%**. The biggest gaps without the skill were missing TLDR structure, no MoSCoW prioritisation, absent accessibility requirements, and vague or missing out-of-scope sections.
 
 → [View SKILL.md](./prd-spec/SKILL.md) · [Download .skill file](./dist/prd-spec.skill)
+
+---
+
+## Skill: Feature Prioritization Matrix
+
+**The problem it solves:** Left to its own devices, Claude invents a custom scoring framework for every prioritization request — different dimensions, different weights, different labels each time. This skill enforces RICE scoring (the PM industry standard) with explicit MoSCoW labels, [est] markers where data is assumed, and a Trade-offs & Risks section that surfaces dependencies and capacity constraints the PM needs to make a defensible call.
+
+**What it produces:** A complete prioritization document including:
+- Context & assumptions (goal, horizon, capacity, data available)
+- RICE scoring matrix for every feature (Reach × Impact × Confidence / Effort)
+- MoSCoW labels: Must Have / Should Have / Could Have / Won't Have This Cycle
+- Prioritized roadmap view with one-line rationale per feature
+- Trade-offs & Risks section (quick wins vs. bets, dependencies, capacity, confidence gaps)
+- Recommended Next Step — one specific action, not a generic "gather data"
+
+**Benchmark:** Tested across 3 scenarios (B2B SaaS churn reduction, fintech activation, B2B marketplace supply growth). With skill: **100% pass rate** vs without skill: **0%**. Without the skill, all 3 outputs used custom scoring formulas instead of RICE, none used MoSCoW labels, and none marked estimated values with `[est]`.
+
+→ [View SKILL.md](./feature-prioritization/SKILL.md) · [Download .skill file](./dist/feature-prioritization.skill)
 
 ---
 
